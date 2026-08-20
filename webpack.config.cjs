@@ -10,7 +10,11 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     filename: 'main.js',
     publicPath: './',
-    clean: true,
+    chunkFilename: '[name].js',
+  },
+  optimization: {
+    splitChunks: false,
+    runtimeChunk: false,
   },
   module: {
     rules: [
